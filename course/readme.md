@@ -73,10 +73,12 @@ console.log(highSalaries);
 ### Functions
 
 ##### Example_1:
-    
+
 - greet + arithmetic function
 - run time validation
 - default paramters
+- void, primitive type
+- never ( loop, throw )
 
 ##### Ex_1:
 
@@ -84,7 +86,108 @@ console.log(highSalaries);
 - The function will print the `productName` only if the print value is true
 - make the `print` default false
 - make `print` optional
+- make sure to put
+
+##### Ex_2:
+
+- Write a function called "twoFer" that accepts a person's name
+- It should return a string in the format `one for <name>, one for me`
+- If no name is provided, it should default to "you"
+
+- twoFer() => "One for you, one for me"
+- twoFer("Gal") => "One for Gal, one for me"
+
+##### Ex_3:
+
+Write a isLeapyear() function that accepts a year and returns true/false depending on if the year is a leap year
+
+- isLeapYear(2012) => true
+- isLeapYear(2013) => false
+
+`To determine whether a year is a leapyear, use this "formula":
+// A YEAR IS A LEAPYEAR IF
+// - year is a multiple of 4 AND not a multiple of 100
+// OR...
+// - year is a multiple of 400
+// hint - use modulo`
+
+### Objects
+
+1. function with Object exmaple
+2. return type
+3. excess properties ignored
+4. Type aliases 
+
+### Casting
+
+##### Ex_1:
+
+- Create a function that receive elementId string & return the element value;
 
 ## Exercises
 
 1. Queue Class with Generics
+
+
+
+// Write the Movie type alias to make the following two variables properly typed
+// Make sure that "originalTitle" is optional and "title" is readonly
+type Movie = {
+  readonly title: string;
+  originalTitle?: string;
+  director: string;
+  releaseYear: number;
+  boxOffice: {
+    budget: number;
+    grossUS: number;
+    grossWorldwide: number;
+  };
+};
+
+const dune: Movie = {
+  title: "Dune",
+  originalTitle: "Dune Part One",
+  director: "Denis Villeneuve",
+  releaseYear: 2021,
+  boxOffice: {
+    budget: 165000000,
+    grossUS: 108327830,
+    grossWorldwide: 400671789,
+  },
+};
+
+const cats: Movie = {
+  title: "Cats",
+  director: "Tom Hooper",
+  releaseYear: 2019,
+  boxOffice: {
+    budget: 95000000,
+    grossUS: 27166770,
+    grossWorldwide: 73833348,
+  },
+};
+
+// Write a function called getProfit that accepts a single Movie object
+// It should return the movie's worldwide gross minus its budget
+
+// For example...
+// getProfit(cats) => -21166652
+
+// function getProfit(movie: Movie): number{
+//     return movie.boxOffice.grossWorldwide - movie.boxOffice.budget
+// }
+
+// function getProfit(movie: Movie): number {
+//   const { grossWorldwide, budget } = movie.boxOffice;
+//   return grossWorldwide - budget;
+// }
+
+function getProfit({ boxOffice: { grossWorldwide, budget } }: Movie): number {
+  return grossWorldwide - budget;
+}
+
+console.log(getProfit(dune));
+console.log(getProfit(cats));
+
+
+

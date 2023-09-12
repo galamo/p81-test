@@ -4,6 +4,8 @@ https://itjet.io/blog/what-is-typescript
 
 https://github.com/basarat/typescript-for-professionals/blob/master/01%20intro/src/index.ts
 
+https://github.com/galamo/trusteer-node/blob/master/playground/typescript/package.json
+
 
 types
 
