@@ -40,3 +40,17 @@ console.log("teeeeteteteete");
 console.log("teeeeteteteete");
 console.log("teeeeteteteete");
 main();
+
+const value1 = document.getElementById("root")?.innerHTML;
+console.log(document.body.innerHTML);
+const value2 = (document.getElementById("inputName") as HTMLInputElement)
+  ?.value;
+console.log(typeof value2);
+
+function print(person: { first: string; last: string }) {
+  console.log(person.first);
+}
+
+print({ first: "Gal", last: "amouyal", age: 34 });
+const person = { first: "Gal", last: "amouyal", age: 34 };
+print(person);
