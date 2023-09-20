@@ -36,18 +36,23 @@ type Colors2 = Color.Red | Color.Blue | Color.Green | Color.Yellow
 
 
 react example with useTransistion
-
 https://blog.openreplay.com/usetransition-vs-usedeferredvalue-in-react-18/
 
-let isPresent: boolean = false;
-let magic: number = 66.6;
-let hello: string = 'world';
 
-let notDefined: undefined = undefined;
-let notPresent: null = null;
+keyof usages
 
-let penta: symbol = Symbol('star');
-let biggy: bigint = 24n;
+https://byby.dev/ts-keyof
+
+
+modules
+https://auth0.com/blog/javascript-module-systems-showdown/
+
+declare
+https://www.geeksforgeeks.org/explain-when-to-use-declare-keyword-in-typescript/
+
+
+
+
 
 
 
