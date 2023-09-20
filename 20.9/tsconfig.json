@@ -1,0 +1,22 @@
+{
+  "ts-node": {
+    "compilerOptions": {
+      "module": "ES2015",
+      "moduleResolution": "node",
+      "noEmit": true,
+      "rootDir": "./testModule",
+      "lib": ["ES2015"]
+    }
+  },
+  "compilerOptions": {
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "noEmit": true,
+    // "allowImportingTsExtensions": true,
+    "outDir": "./dist",
+    "rootDir": "testModule3",
+    "lib": ["ES2015"]
+  },
+
+  "exclude": ["node_modules"]
+}

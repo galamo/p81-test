@@ -1,0 +1,16 @@
+{
+  "name": "20.9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "ts-node ./testModule/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.22.2"
+  }
+}
