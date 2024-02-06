@@ -9,5 +9,3 @@ enum SuperRoles {
 
 type Admins = Exclude<Roles | SuperRoles, 2>;
 const admin: Admins = 999;
-console.log(admin);
-export default App;

@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  node_test_js:
+    build:
+      context: .
+    image: node_test_js
+    environment:
+      - COMMANDSTART=start

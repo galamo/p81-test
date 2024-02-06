@@ -86,7 +86,6 @@ console.log(highSalaries);
 - The function will print the `productName` only if the print value is true
 - make the `print` default false
 - make `print` optional
-- make sure to put
 
 ##### Ex_2:
 
@@ -113,10 +112,10 @@ Write a isLeapyear() function that accepts a year and returns true/false dependi
 
 ### Objects
 
-1. function with Object exmaple
-2. return type
-3. excess properties ignored
-4. Type aliases 
+1. Function with Object example
+2. Return type
+3. Properties ignored
+4. Type aliases
 
 ### Casting
 
@@ -128,43 +127,41 @@ Write a isLeapyear() function that accepts a year and returns true/false dependi
 
 1. Queue Class with Generics
 
-
-
 // Write the Movie type alias to make the following two variables properly typed
 // Make sure that "originalTitle" is optional and "title" is readonly
 type Movie = {
-  readonly title: string;
-  originalTitle?: string;
-  director: string;
-  releaseYear: number;
-  boxOffice: {
-    budget: number;
-    grossUS: number;
-    grossWorldwide: number;
-  };
+readonly title: string;
+originalTitle?: string;
+director: string;
+releaseYear: number;
+boxOffice: {
+budget: number;
+grossUS: number;
+grossWorldwide: number;
+};
 };
 
 const dune: Movie = {
-  title: "Dune",
-  originalTitle: "Dune Part One",
-  director: "Denis Villeneuve",
-  releaseYear: 2021,
-  boxOffice: {
-    budget: 165000000,
-    grossUS: 108327830,
-    grossWorldwide: 400671789,
-  },
+title: "Dune",
+originalTitle: "Dune Part One",
+director: "Denis Villeneuve",
+releaseYear: 2021,
+boxOffice: {
+budget: 165000000,
+grossUS: 108327830,
+grossWorldwide: 400671789,
+},
 };
 
 const cats: Movie = {
-  title: "Cats",
-  director: "Tom Hooper",
-  releaseYear: 2019,
-  boxOffice: {
-    budget: 95000000,
-    grossUS: 27166770,
-    grossWorldwide: 73833348,
-  },
+title: "Cats",
+director: "Tom Hooper",
+releaseYear: 2019,
+boxOffice: {
+budget: 95000000,
+grossUS: 27166770,
+grossWorldwide: 73833348,
+},
 };
 
 // Write a function called getProfit that accepts a single Movie object
@@ -174,67 +171,57 @@ const cats: Movie = {
 // getProfit(cats) => -21166652
 
 // function getProfit(movie: Movie): number{
-//     return movie.boxOffice.grossWorldwide - movie.boxOffice.budget
+// return movie.boxOffice.grossWorldwide - movie.boxOffice.budget
 // }
 
 // function getProfit(movie: Movie): number {
-//   const { grossWorldwide, budget } = movie.boxOffice;
-//   return grossWorldwide - budget;
+// const { grossWorldwide, budget } = movie.boxOffice;
+// return grossWorldwide - budget;
 // }
 
 function getProfit({ boxOffice: { grossWorldwide, budget } }: Movie): number {
-  return grossWorldwide - budget;
+return grossWorldwide - budget;
 }
 
 console.log(getProfit(dune));
 console.log(getProfit(cats));
 
-
-
-
-
 solution
 
-
-// **********************************************
-// ******************* PART 1 *******************
-// **********************************************
+// **********\*\***********\*\***********\*\***********
+// **\*\*\*\***\*\*\***\*\*\*\*** PART 1 **\*\*\*\***\*\*\***\*\*\*\***
+// **********\*\***********\*\***********\*\***********
 // Create an empty array of numbers called "ages":
 const ages: number[] = [];
-// **********************************************
-// ******************* PART 2 *******************
-// **********************************************
+// **********\*\***********\*\***********\*\***********
+// **\*\*\*\***\*\*\***\*\*\*\*** PART 2 **\*\*\*\***\*\*\***\*\*\*\***
+// **********\*\***********\*\***********\*\***********
 // Create an array variable called gameBoard that starts as an empty array.
 // It should be typed to hold a 2 dimensional array of strings
 const gameBoard: string[][] = [];
 
-// **********************************************
-// ******************* PART 3 *******************
-// **********************************************
+// **********\*\***********\*\***********\*\***********
+// **\*\*\*\***\*\*\***\*\*\*\*** PART 3 **\*\*\*\***\*\*\***\*\*\*\***
+// **********\*\***********\*\***********\*\***********
 // Create a Product type that contains a name and a price.
 // An example product could be:
 // {name: "coffee mug", price: 11.50}
 type Product = {
-  name: string;
-  price: number;
+name: string;
+price: number;
 };
-// **********************************************
-// ******************* PART 4 *******************
-// **********************************************
+// **********\*\***********\*\***********\*\***********
+// **\*\*\*\***\*\*\***\*\*\*\*** PART 4 **\*\*\*\***\*\*\***\*\*\*\***
+// **********\*\***********\*\***********\*\***********
 // Write a function called getTotal that accepts an array of Product types
 // It should return the sum of all the products' prices
 
 function getTotal(products: Product[]): number {
-  let total = 0;
-  for (let product of products) {
-    total += product.price;
-  }
-  return total;
+let total = 0;
+for (let product of products) {
+total += product.price;
+}
+return total;
 }
 
-
-
 https://github.com/typescript-exercises/typescript-exercises/blob/main/src/exercises/4/index.ts
-
-
-
