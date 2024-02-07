@@ -5,7 +5,7 @@ async function getCountries<T>(): Promise<T> {
 }
 
 async function init2() {
-  const result: Awaited<Promise<{ area: number }>> = await getCountries<{
+  const result: Awaited<Promise<any>> = await getCountries<{
     area: number;
   }>();
   console.log(result[0].area);
